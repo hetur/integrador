@@ -1,0 +1,24 @@
+.container{
+    display:flex;
+    justify-content: center;
+}
+
+input{
+    background-color: chartreuse;
+    font-family: cursive;
+    border-radius: 10px 0 0 10px;
+    border-color: aliceblue;
+}
+
+button{
+    background-color: rgb(64, 107, 21);
+    font-family: cursive;
+    border-radius: 0 10px 10px 0;
+    color:white;
+}
+
+button:hover{
+    background-color: rgb(226, 226, 237);
+    color: green;
+    cursor: pointer;
+}
