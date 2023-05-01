@@ -1,0 +1,8 @@
+.container{
+    display:flex;
+    justify-content: flex-end;
+    background-color: rgb(34, 212, 70);
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
