@@ -1,0 +1,10 @@
+.container {
+   
+    color: rgb(5, 82, 16);
+   background-color: chartreuse;
+}
+
+.containerInfo{
+    display:flex;
+    justify-content: space-around;
+}

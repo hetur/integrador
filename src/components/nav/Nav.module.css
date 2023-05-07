@@ -1,8 +1,21 @@
+
 .container{
-    display:flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 20% 20% 60%;
     background-color: rgb(34, 212, 70);
     padding: 15px;
     border-radius: 20px;
     margin-bottom: 20px;
+}
+
+.active{
+    -webkit-text-stroke: 1px rgb(30, 113, 41);
+        color: red; 
+        text-underline-offset: 5px;
+        text-decoration-color: rgb(134, 228, 71);
+    }
+
+.disable {
+    text-decoration: none;
+    color: inherit;
 }
