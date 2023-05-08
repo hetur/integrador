@@ -1,0 +1,16 @@
+.container{
+   display: flex;
+   background-color: rgb(92, 186, 41);
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   border-radius: 20px;
+   margin: 50px;
+   width: fit-content;
+   height: fit-content;
+}
+
+.warning {
+   border-color: red;
+}

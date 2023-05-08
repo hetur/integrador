@@ -16,6 +16,7 @@ export default function Detail(pops){
             console.log(err)
             alert("ups algo salio mal")
         })
+        return ()=> setCharacter ({})
     },[]);
     return (
         <div className={styles.container}>

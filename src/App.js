@@ -1,26 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Cards from './components/cards/Cards.jsx';
 import Nav from "./components/nav/Nav";
-import {Routes, Route} from "react-router-dom"
+import {Routes, Route, useLocation} from "react-router-dom"
 import About from "./components/about/About";
 import Detail from "./components/detail/Detail";
+import Form from './components/form/Form';
 
 function App () {
+   const location = useLocation()
    const [characters, setCharacters] = useState([])
-   // const example = {
-   //    id: 1,
-   //    name: 'Rick Sanchez',
-   //    status: 'Alive',
-   //    species: 'Human',
-   //    gender: 'Male',
-   //    origin: {
-   //       name: 'Earth (C-137)',
-   //       url: 'https://rickandmortyapi.com/api/location/1',
-   //    },
-   //    image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-   // };
-
    const onSearch = (id) => {
       fetch(`https://rickandmortyapi.com/api/character/${id}`)
       .then((res) => res.json())
@@ -30,6 +19,10 @@ function App () {
       })
       .catch((error) => console.log(error))
    };
+
+   useEffect(() =>{
+
+   }, [])
 
    const onClose = (id) => {
       const filtered = characters.filter((char) =>char.id !== Number (id))
@@ -42,8 +35,10 @@ function App () {
          padding: "25px",
       }}
         >
-         <Nav onSearch={onSearch} />
+         {location.pathname !== "/" &&
+         <Nav onSearch={onSearch} />}
          <Routes>
+            <Route path='/' element={<Form/>}/>
             <Route path="/home" element={<Cards characters={characters} onClose={onClose}/>} />
             <Route path="/about" element={<About />} />
             <Route path="/detail/:detailId" element={<Detail/>} />
